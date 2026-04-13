@@ -138,6 +138,28 @@ export default function HomePage() {
           </button>
         </div>
 
+        {/* ── DOWNLOAD CTA ── */}
+        <div className="bg-[#0D0D14] border border-[#1F2937] rounded-2xl p-6 text-center space-y-4">
+          <div>
+            <h3 className="text-white font-semibold text-lg mb-2">
+              Découvrez l'app mobile EduTrack
+            </h3>
+            <p className="text-[#6B7280] text-sm leading-relaxed">
+              Gérez vos formations, suivez votre progression et obtenez des
+              certificats directement sur votre téléphone.
+            </p>
+          </div>
+          <a
+            href="https://www.dropbox.com/scl/fi/nhqyt3ek7c5rchstvlzaj/application-0834e1f7-0f83-4e5a-b913-3a557d32835c.apk?rlkey=2ugw51rykkynn1uxaddrqui8k&st=em5s5rrd&dl=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold py-2.5 px-6 rounded-xl transition-colors"
+          >
+            <img src="/logo.png" alt="logo" className="w-5 h-5 rounded" />
+            Télécharger l'APK
+          </a>
+        </div>
+
         {/* ── INFO ── */}
         <div className="bg-[#0D0D14] border border-[#1F2937] rounded-2xl p-4 flex items-start gap-3">
           <div className="w-8 h-8 rounded-lg bg-[#111118] border border-[#1F2937] flex items-center justify-center shrink-0 mt-0.5">
