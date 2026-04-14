@@ -5,7 +5,8 @@ import DownloadPage from "./pages/DownloadPage";
 
 export default function App() {
   // Simple routing based on pathname
-  const path = window.location.pathname;
+  const rawPath = window.location.pathname;
+  const path = rawPath.replace(/\/+$/, "") || "/";
 
   // /verify/:matricule → page de vérification
   const match = path.match(/^\/verify\/(.+)$/);
