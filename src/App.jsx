@@ -2,6 +2,7 @@ import VerifyPage from "./pages/VerifyPage";
 import HomePage from "./pages/HomePage";
 import PrivacyPage from "./pages/PrivacyPage";
 import DownloadPage from "./pages/DownloadPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 export default function App() {
   // Simple routing based on pathname
@@ -10,11 +11,24 @@ export default function App() {
 
   // /verify/:matricule → page de vérification
   const match = path.match(/^\/verify\/(.+)$/);
-  if (match) return <VerifyPage matricule={match[1]} />;
+  if (match) {
+    return <VerifyPage matricule={match[1]} />;
+  }
 
-  if (path === "/privacy") return <PrivacyPage />;
+  let component;
+  switch (path) {
+    case "/":
+      component = <HomePage />;
+      break;
+    case "/privacy":
+      component = <PrivacyPage />;
+      break;
+    case "/download":
+      component = <DownloadPage />;
+      break;
+    default:
+      component = <NotFoundPage />;
+  }
 
-  if (path === "/download") return <DownloadPage />;
-
-  return <HomePage />;
+  return component;
 }
