@@ -6,18 +6,18 @@ import {
   CheckCircle,
   HelpCircle,
 } from "lucide-react";
-import {  FAQItem } from "../components/ui/faq";
+import { FAQItem } from "../components/ui/faq";
 
 export default function DownloadPage() {
   const faq_Items = [
     // ── INSTALLATION ─────────────────────────────────────────────
     {
       q: "Comment installer l'APK sur mon téléphone Android ?",
-      a: "Téléchargez le fichier APK via le bouton sur cette page. Si votre téléphone bloque l'installation, allez dans Paramètres → Sécurité → activez « Sources inconnues » ou « Installer des apps inconnues ». Ouvrez ensuite le fichier téléchargé et appuyez sur Installer.",
+      a: "Téléchargez l'application via le bouton Uptodown officiel sur cette page (recommandé) ou via le lien APK direct. Si votre téléphone bloque l'installation, allez dans Paramètres → Sécurité → activez « Sources inconnues » ou « Installer des apps inconnues ». Ouvrez ensuite le fichier téléchargé et appuyez sur Installer.",
     },
     {
       q: "Où télécharger l'application ?",
-      a: "Téléchargez la dernière version directement sur cette page ou via l'adresse officielle : https://edutrack-verify.vercel.app/download",
+      a: "Téléchargez la dernière version directement sur cette page via Uptodown (méthode officielle recommandée) ou via l'adresse : https://edutrack-verify.vercel.app/download. Uptodown garantit la sécurité et l'authenticité de l'application.",
     },
     {
       q: "J'ai un problème lors de l'installation, que faire ?",
@@ -177,19 +177,45 @@ export default function DownloadPage() {
                 Version 1.0.0 (Stable) • Android APK • 143 MB
               </p>
 
-              <a
-                href="https://www.dropbox.com/scl/fi/nhqyt3ek7c5rchstvlzaj/application-0834e1f7-0f83-4e5a-b913-3a557d32835c.apk?rlkey=2ugw51rykkynn1uxaddrqui8k&st=em5s5rrd&dl=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 transition-all duration-300 rounded-xl font-bold text-lg shadow-xl shadow-blue-600/20 active:scale-95"
-              >
-                <img
-                  src="/logo.png"
-                  alt="logo"
-                  className="w-6 h-6 rounded group-hover:animate-bounce"
-                />
-                Télécharger l'APK
-              </a>
+              {/* Bouton principal Uptodown */}
+              <div className="w-full mb-4">
+                <p className="text-blue-400 font-semibold text-sm mb-2">
+                  Téléchargement officiel recommandé :
+                </p>
+                <a
+                  href="https://com-billydoumbouya-edutrack.en.uptodown.com/android"
+                  title="Download EduTrack"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 transition-all duration-300 rounded-xl font-bold text-lg shadow-xl shadow-green-600/30 active:scale-95 border-2 border-green-400/50"
+                >
+                  <img
+                    src="https://stc.utdstc.com/img/mediakit/download-aao-small.png"
+                    alt="Download EduTrack"
+                    className="h-8 group-hover:scale-110 transition-transform"
+                  />
+                </a>
+              </div>
+
+              {/* Option secondaire Dropbox */}
+              <div className="w-full">
+                <p className="text-gray-400 text-sm mb-2">
+                  Ou téléchargement direct APK :
+                </p>
+                <a
+                  href="https://www.dropbox.com/scl/fi/nhqyt3ek7c5rchstvlzaj/application-0834e1f7-0f83-4e5a-b913-3a557d32835c.apk?rlkey=2ugw51rykkynn1uxaddrqui8k&st=em5s5rrd&dl=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 transition-all duration-300 rounded-xl font-bold text-lg shadow-xl shadow-blue-600/20 active:scale-95"
+                >
+                  <img
+                    src="/logo.png"
+                    alt="logo"
+                    className="w-6 h-6 rounded group-hover:animate-bounce"
+                  />
+                  Télécharger l'APK
+                </a>
+              </div>
 
               <div className="mt-8 w-full grid grid-cols-2 gap-4">
                 <div className="p-4 rounded-xl bg-white/5 border border-white/5 flex flex-col items-center">

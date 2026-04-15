@@ -149,15 +149,42 @@ export default function HomePage() {
               certificats directement sur votre téléphone.
             </p>
           </div>
-          <a
-            href="https://www.dropbox.com/scl/fi/nhqyt3ek7c5rchstvlzaj/application-0834e1f7-0f83-4e5a-b913-3a557d32835c.apk?rlkey=2ugw51rykkynn1uxaddrqui8k&st=em5s5rrd&dl=1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold py-2.5 px-6 rounded-xl transition-colors"
-          >
-            <img src="/logo.png" alt="logo" className="w-5 h-5 rounded" />
-            Télécharger l'APK
-          </a>
+
+          {/* Bouton principal Uptodown */}
+          <div className="space-y-3">
+            <p className="text-green-400 text-xs font-semibold">
+              Téléchargement officiel recommandé :
+            </p>
+            <a
+              href="https://com-billydoumbouya-edutrack.en.uptodown.com/android"
+              title="Download EduTrack"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white font-semibold py-2.5 px-6 rounded-xl transition-all shadow-lg shadow-green-600/30 active:scale-95 border border-green-400/50"
+            >
+              <img
+                src="https://stc.utdstc.com/img/mediakit/download-aao-small.png"
+                alt="Download EduTrack"
+                className="h-6 hover:scale-110 transition-transform"
+              />
+            </a>
+          </div>
+
+          {/* Option secondaire Dropbox */}
+          <div className="space-y-2">
+            <p className="text-[#6B7280] text-xs">
+              Ou téléchargement direct APK :
+            </p>
+            <a
+              href="https://www.dropbox.com/scl/fi/nhqyt3ek7c5rchstvlzaj/application-0834e1f7-0f83-4e5a-b913-3a557d32835c.apk?rlkey=2ugw51rykkynn1uxaddrqui8k&st=em5s5rrd&dl=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold py-2.5 px-6 rounded-xl transition-colors"
+            >
+              <img src="/logo.png" alt="logo" className="w-5 h-5 rounded" />
+              Télécharger l'APK
+            </a>
+          </div>
         </div>
 
         {/* ── INFO ── */}
